@@ -3,6 +3,13 @@ title: "Get started with Next.JS from zero to hero"
 date: "01-10-2023"
 ---
 
+# Table of Contents
+
+- [Introduction](#Introduction)
+- [Why Next.JS](#Why-Next-JS)
+- [Get started with Next.JS](#get-started-with-next.js)
+  - [Start coding](#start-coding)
+
 # Introduction
 
 So, you want to be a web developer? You want to build robust, fullstack application which are fast, and reliable? Next.JS is the best choice you have possibly made. Let's get into it.
@@ -10,3 +17,33 @@ So, you want to be a web developer? You want to build robust, fullstack applicat
 # Why Next.JS
 
 Let me tell you why you are here:
+
+# Get started with Next.JS
+
+Run the following command:
+
+```
+npx create-next-app@latest
+```
+
+## Start coding
+
+```JS
+const getData = async () => {
+    const res = await fetch("yoursite.com")
+
+    return res.json();
+}
+
+// Now you can use this function to get data in the server and send to the client
+
+export default async function page() {
+    const data = getData();
+
+    const userData = await data;
+
+    return (
+        //...
+    )
+}
+```
